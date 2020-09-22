@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+
+	<TextView
+		android:id="@+id/txt"
+		android:layout_width="96dp"
+		android:layout_height="42dp"
+		android:layout_marginStart="16dp"
+		android:text="File Name:"
+		android:textSize="18sp"
+		app:layout_constraintBaseline_toBaselineOf="@+id/fileName"
+		app:layout_constraintStart_toStartOf="parent"/>
+
+	<EditText
+		android:id="@+id/fileName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="56dp"
+		android:layout_marginEnd="16dp"
+		android:ems="10"
+		android:hint="Enter File Name"
+		android:inputType="textPersonName"
+		android:text="@string/name"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.484"
+		app:layout_constraintStart_toEndOf="@+id/txt"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<Button
+		android:id="@+id/startRecording"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="68dp"
+		android:text="@string/start_recording"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/txt"/>
+
+	<Button
+		android:id="@+id/stopRecording"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="72dp"
+		android:layout_marginEnd="8dp"
+		android:text="@string/stop_recording"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.39"
+		app:layout_constraintStart_toEndOf="@+id/startRecording"
+		app:layout_constraintTop_toBottomOf="@+id/fileName"/>
+
+	<Button
+		android:id="@+id/startPlaying"
+		android:layout_width="140dp"
+		android:layout_height="44dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="32dp"
+		android:layout_marginBottom="8dp"
+		android:text="@string/start_playing"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/startRecording"
+		app:layout_constraintVertical_bias="0.0"/>
+
+	<Button
+		android:id="@+id/stopPlaying"
+		android:layout_width="143dp"
+		android:layout_height="44dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="44dp"
+		android:layout_marginBottom="8dp"
+		android:text="@string/stop_playing"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toEndOf="@+id/startPlaying"
+		app:layout_constraintTop_toBottomOf="@+id/stopRecording"
+		app:layout_constraintVertical_bias="0.128"/>
+</android.support.constraint.ConstraintLayout>
